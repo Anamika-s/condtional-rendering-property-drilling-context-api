@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App1 from './App1';
+import App2 from './App2';
+import App3 from './App3';
 
+import { App5 } from './PassValuesFromParentToChild/App5';
+import { Parent } from './components/ContextApi/Parent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App3 /> */}
+    <Parent/>
+    {/* <App5/> */}
   </React.StrictMode>
 );
 

@@ -1,24 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { useState } from 'react';
+import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils';
+import AuthButton from './components/AuthButton';
+import AuthButton1 from './components/AuthButton1';
 function App() {
+ 
+ const [IsLoggedIn, setIsLoggedIn]= useState(false);  
+  
+ console.log(IsLoggedIn)
+//  const renderAuthButton =()=>
+//  {
+//   console.log("IsLoggedIn" + IsLoggedIn)
+//     if(IsLoggedIn)
+//       return <button> Logout </button>
+//       else 
+//       return <button> Login </button>
+//  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <h1>
+  IsLoggedIn {IsLoggedIn}
+     This is a Demo showing several ways to implemet Conditional Rendering in React
+  </h1>
+  {/* <button> Login </button>
+  <button> Logout </button> */}
+  {/* {renderAuthButton()} */}
+  {/* <AuthButton IsLoggedIn={IsLoggedIn}/> */}
+  <AuthButton1 IsLoggedIn={IsLoggedIn}/>
+   </div>
   );
 }
 
